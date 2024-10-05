@@ -1,0 +1,428 @@
+n=int(input("enter the mark: "))
+if n>101:
+    print("invalid mark")
+elif n<=100 and n>=90:
+    print ("a")
+elif n<=89 and n>=80:
+    print("b")
+elif n<=79 and n>=70:
+    print("c")
+elif n<=69 and n>=60:
+    print("d")
+elif n<60:
+    print("try again")
+
+
+
+
+
+
+n=int(input("enter the mark: "))
+if n>0:
+    print("possitive")
+elif n<0:
+    print ("negative")
+else:
+    print("zero")
+
+
+
+
+
+balance = 0  
+while True:
+    print("1. Check Balance")
+    print("2. Deposit")
+    print("3. Withdraw")
+    print("4. Exit")
+    
+    choice = int(input("Enter your choice: "))
+
+    if choice == 1:
+        print(f"Your balance: {balance}")
+    
+    elif choice == 2:
+        deposit = int(input("Enter amount to deposit: "))
+        balance += deposit
+        print(f"Deposited: {deposit}, New balance: {balance}")
+    
+    elif choice == 3:
+        withdraw = int(input("Enter amount to withdraw: "))
+        if withdraw <= balance:
+            balance -= withdraw
+            print(f"Withdrew: {withdraw}, New balance: {balance}")
+        else:
+            print("Insufficient balance!")
+    
+    elif choice == 4:
+        print("Exiting...")
+        break
+    
+    else:
+        print("Invalid choice, try again.")
+
+
+
+
+balance=0
+while True:
+    print("1.check balance")
+    print("2.deposite")
+    print("3.withdraw")
+    print("4.exit")
+
+    choice=int(input("enter choice: "))
+    if choice==1:
+        print("balanvce:",balance)
+    elif choice==2:
+        deposite=int(input("enter the amount to deposite: "))
+        balance=balance+deposite
+        print("current balance: ",balance)
+    elif choice==3:
+        withdraw=int(input("enter the amount to withdraw: "))
+        if balance>withdraw:
+            balance=balance-withdraw
+        else:
+            print("check the current balance")
+        print("current balance: ",balance)
+    elif choice==4:
+        break
+    else:
+        print("invalid choice")
+
+
+
+
+
+n=input("enter the number: ")
+s=0
+for i in n:
+    s+=int(i)
+print("sum of the digits",s)
+
+
+
+longest consecutive 0's
+*************
+s="0101010100010000010"
+new=s.split("1")
+print(new)
+print(max(new),len(max(new)))
+
+
+
+format functon
+*********
+a,b=100,200
+print("sum of {} + {} = {}".format(a,b,a+b))
+area=123.334893234321
+print("area:{:.2f}".format(area))
+print("area:{:.4f}".format(area))
+
+
+panagram
+*******
+s ="".join(input().lower().split())
+print(s)
+s = set(s)
+print(s)
+print("Panagram String" if len(s)==26 else "Not a Panagram String")
+
+
+
+
+count xo
+********
+def XO(text):
+    x=text.lower().count('x')
+    o=text.lower().count('o')
+    
+    if(x==o):
+        print("true")
+    else:
+        print("false")
+b="xxxooo"
+print(XO(b))
+    
+
+
+
+
+def hamming_distance(txt1,txt2):
+    return sum(a!=b for a,b in zip(txt1,txt2))
+t1="abcde"
+t2="afcdr"
+print(t1)
+print(t2)
+print(hamming_distance(t1,t2))
+
+
+
+
+arrange the names in ascending order and print the first letters
+***********************
+s=(["nithish","peru","guna"])
+s.sort()
+print(s[0][0])
+for i in s:
+    print(i[0],end="")
+
+
+
+
+n=int(input())
+for i in range(1,n+1):
+    if i==1 or i==n:
+        print("#"*n)
+    else:
+        print("#"+" "*(n-2)+"#")        
+
+
+
+
+
+
+n1=int(input("enter the side 1: "))
+n2=int(input("enter the side 2: "))
+n3=int(input("enter the side 3: "))
+if(n1==n2==n3):
+    print("equal triangle")
+elif(n1!=n2 and n1!=n3 and n2!=n3):
+    print("scalene triangle")
+else: #elif(n1==n2 or n1==n2 or n2==n3)
+    print("isosceles triangle")
+
+
+
+
+
+train seat
+*********
+n=int(input("enter the seat nubers: "))
+if(n>72 or n<=0):
+    print("invalid seat number")
+elif(n%8==1 or 4):
+    print("LB")
+elif(n%8==2 or 5):
+    print("MB")
+elif(n%8==3 or 6):
+    print("UB")
+elif(n%8==7):
+    print("SLB")
+elif(n%8==0):
+    print("SUB")
+
+    
+
+
+
+current bill calculator
+*****************
+a=int(input("enter the units: "))
+if(a>=1 and a<=100):
+    print(a*2+10)
+elif(a>=101 and a<=250):
+    print(100*2+(a-100)*3+20)
+elif(a>=251 and a<=500):
+    print(100*2+(150*3)+(a-250)*4+30)
+elif(a>=501 and a<=1000):
+    print(100*2+(150*3)+(250*4)+(a-500)*5+40)
+else:
+    print(100*2+(150*3)+(250*4)+(500*5)+(a-1000)*7+100)
+  
+
+
+
+
+
+day = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun']
+start_day = input("Enter the starting day: ").lower()
+n = int(input("Enter the number of days: "))
+start_index = day.index(start_day)
+sundays = n // 7
+if (start_index + n % 7) >= 6:
+    sundays += 1
+print(f"{sundays} Sundays")
+
+
+
+dog's age
+**********
+a=int(input("enter the age: "))
+if(a>0 and a<=2):
+    print(a*10.5)
+elif(a>3):
+    b=a-2
+    print(2*10.5+ (b*4))
+elif(a<0):
+    print("invalid age")
+  
+
+
+
+
+a=input()
+b=[]
+for i in a:
+    if i!='#':
+        b.append(i)
+    else:
+        b.pop()
+        print(b)
+print("".join(b))
+
+  
+
+
+
+
+append example
+***********
+a="hihihi"
+b="aa"
+c=[]
+c.append(a+b)  
+print(c)
+
+
+
+
+
+
+def can_form_strings(strings):
+    longest_string = max(strings, key=len)
+    longest_set = set(longest_string)
+    for string in strings:
+        current_set = set(string)
+        if not current_set.issubset(longest_set):
+            return False
+    return True
+string_list = ["may", "same", "resame", "mastery"]
+result = can_form_strings(string_list)
+print(result)
+
+
+
+
+
+2nd biggest number
+*********
+n=[9,2,6,8]
+n.sort()
+print(n)
+print(n[-2]
+
+
+
+product of the digits
+***********
+n=input("enter the number: ")
+s=1
+for i in n:
+    s*=int(i)
+print("product of the digits: ",s)
+
+
+
+
+
+odd or even without using modules
+******************
+num = input("Enter a number: ")
+even = list(map(str, [0, 2, 4, 6, 8]))
+odd = list(map(str, [1, 3, 5, 7, 9]))
+last_digit = num[-1]
+if last_digit in even:
+    print("Even")
+else:
+    print("Odd")
+
+
+
+
+
+day = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun']
+start_day = input("Enter the starting day: ").lower()
+n = int(input("Enter the number of days: "))
+if (start_day!=day):
+    print("invalid day")
+start_index = day.index(start_day)
+sundays = n // 7
+if (start_index + n % 7) >= 6:
+    sundays += 1
+print(f"{sundays} Sundays")
+
+
+
+
+
+a=input()
+b=[]
+c=[]
+for i in a:
+    if i=='#':
+        b.append(i)
+        print(b)
+    else:
+        c.append(i)
+        print(c)
+if len(b)==len(c):
+    print("zero")
+elif len(b)>len(c):
+    print("positive")
+elif len(b)<len(c):
+    print("negative")
+
+
+
+right shift
+*******
+a=14
+print("binary",bin(a))#1110
+bin(a>>2)
+print(a>>2)#0011
+
+
+
+
+left shift
+**********
+a=14
+print("binary",bin(a))#1110
+bin(a<<2)
+print(a<<2)#111000
+
+
+
+
+
+
+n=int(input("total number of candies: "))
+a=int(input("number of candies sold: "))
+b=n-a
+if(b>=5):
+    print("number of remaining:",b)
+elif(b<5):
+    print("invalid")
+
+
+
+
+
+
+a=input("enter the number: ")
+b=0
+for i in a:
+    b+=int(i)
+e=int(input("times: "))
+c=int(b*e)
+print("sum of numbers multipled by times: ",c)
+d=0
+for i in str(c):
+    d+=int(i)
+print(d)
+
+
+
+
+
